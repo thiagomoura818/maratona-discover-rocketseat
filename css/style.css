@@ -353,6 +353,7 @@ input:focus{
 
 .input-group small{
      opacity: 0.4;
+     color: var(--input-default-color);
 }
 
 .input-group.actions{
@@ -364,46 +365,6 @@ input:focus{
 .input-group.actions .button,
 .input-group.actions button{
      width: 48%;
-}
-
-/* DarkMode ================== */
-
-body.darkmode{
-     background-color: #202020;
-     transition: .4s;
-}
-
-.cards-dark{
-     background-color: #252525;
-     transition: .4s;
-     color: rgb(238, 238, 238);
-}
-
-.negative-mode{
-     background-color: var(--red);
-}
-
-.header-dark{
-     background-color: #1b1b1b;
-}
-
-.modal-dark{
-     background-color: #202020;
-}
-
-.inputs-dark{
-     background-color: #2e2e2e;
-     color: white;
-}
-
-.h2-dark{
-     color: #9aa6d4;
-}
-
-.teste{
-     color: #b9c5f5;
-     background-color: #252525;
-     transition: .4s;
 }
 
 /* FOOTER ===================== */
