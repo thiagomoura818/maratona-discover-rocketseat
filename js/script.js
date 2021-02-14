@@ -42,7 +42,7 @@ const Transaction = {
 
      incomes(){
           let income = 0;
-          Transaction.all.forEach((transaction) => {
+          Transaction.all.forEach(transaction => {
                if(transaction.amount > 0){
                     income += transaction.amount;
                }
@@ -53,7 +53,7 @@ const Transaction = {
 
      expenses(){
           let expense = 0;
-          Transaction.all.forEach((transaction) => {
+          Transaction.all.forEach(transaction => {
                if(transaction.amount < 0){
                     expense += transaction.amount;
                }
@@ -109,9 +109,15 @@ const DOM = {
      },
 
      updateBalance(){
-          document.getElementById('incomeDisplay').innerHTML = Utils.formatCurrency(Transaction.incomes());
-          document.getElementById('expenseDisplay').innerHTML = Utils.formatCurrency(Transaction.expenses());
-          document.getElementById('totalDisplay').innerHTML = Utils.formatCurrency(Transaction.total());
+          document
+               .getElementById('incomeDisplay')
+               .innerHTML = Utils.formatCurrency(Transaction.incomes());
+          document
+               .getElementById('expenseDisplay')
+               .innerHTML = Utils.formatCurrency(Transaction.expenses());
+          document
+               .getElementById('totalDisplay')
+               .innerHTML = Utils.formatCurrency(Transaction.total());
      },
 
      clearTransactions(){
@@ -132,18 +138,20 @@ const Utils = {
           return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`
      },
 
-     formatCurrency(value){
-          const signal = Number(value) < 0 ? "-" : " ";
-
+     formatCurrency(value) {
+          const signal = Number(value) < 0 ? "-" : "";
+  
           value = String(value).replace(/\D/g, "");
+  
           value = Number(value) / 100;
+  
           value = value.toLocaleString("pt-BR", {
-               style: "currency",
-               currency: "BRL",
+              style: "currency",
+              currency: "BRL"
           });
-
-          return signal + value;
-     },
+  
+         return signal + value;
+      }
 };
 
 const Form = {
