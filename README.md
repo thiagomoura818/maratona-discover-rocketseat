@@ -1,2 +1,1 @@
-# MaratonaDiscover---Rocketseat-
-MaratonaDiscover da Rocketseat.
+# Maratona Discover - Rocketseat
